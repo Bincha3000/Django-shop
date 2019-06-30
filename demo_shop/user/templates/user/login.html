@@ -1,0 +1,21 @@
+{% extends 'products_list/base.html' %}
+{% load static %}
+{% block content %}
+<section class="login">
+
+    <h1 class="main-title text-center mb-40">Вход на сайт</h1>
+
+    <form method="post" class="form">
+        {% if error %}
+        <div style="color:red;">{{ error }}</div>
+        {% endif %}
+
+        {% csrf_token %}
+        <label for="username">Имя пользователя:</label>
+        <input class="input mb-20" id="username" type="text" name="username">
+        <label for="password">Пароль:</label>
+        <input class="input mb-40" type="password" name="password">
+        <input class="main-button" type="submit" value="Войти">
+    </form>
+</section>
+{% endblock %}

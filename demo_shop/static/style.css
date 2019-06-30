@@ -1,0 +1,261 @@
+* {
+    color: #333d45;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333d45;
+}
+
+/* Reusable styles */
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* End reusable styels */
+
+.header {
+    position: relative;
+    
+    width: 100%;
+    box-shadow: 0 2px 3px #ddd;
+    box-sizing: border-box;
+
+    padding: 30px 0;
+}
+
+.header-bg {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: url('img/candy.jpg') 50% 25% no-repeat;
+    background-size: cover;
+
+    z-index: 0;
+
+    opacity: 0.8;
+}
+
+.header-content {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-txt {
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.empty-cart {
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.main-title {
+    font-size: 60px;
+    font-family: 'Emilys Candy';
+    color: #e41787
+
+}
+
+.second-title {
+    font-size: 30px;
+    color: #333d45;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.main-button {
+    outline: none;
+    background: none;
+    border: none;
+
+    text-decoration: none;
+
+    height: 30px;
+    padding: 0 20px;
+
+    background-color: #e41787;
+
+    color: #fff;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #e68a8a;
+    text-decoration: none;
+}
+
+.main-button:visited {
+    color: #fff;
+}
+
+.products-list__wrapper {
+    display: flex;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.products-list__content {
+    display: grid;
+
+    grid-template-columns: repeat(3, 300px);
+
+    grid-gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.categories {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-item {
+    font-size: 18px;
+
+    font-style: italic;
+}
+
+.categories-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.product-card {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 3px #ddd;
+    box-sizing: border-box;
+
+    padding: 20px 20px 60px 20px;
+
+    margin-bottom: 40px;
+
+    border-radius: 10px;
+    
+    align-items: center;
+}
+
+.product-card__title {
+    margin-bottom: 10px;
+}
+
+.product-card__img {
+    width: 80%;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.product-price {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    align-self: flex-start;
+    margin-top: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.product-price__title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.signup, .login {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 100px;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+
+    margin: 0 auto;
+}
+
+.input {
+    border: none;
+    outline: none;
+
+    border-bottom: 1px solid #d3d3d3;
+
+    font-size: 16px;
+
+    margin-top: 10px;
+}
+
+.input:not(:last-child) {
+}

@@ -1,0 +1,39 @@
+{% extends 'products_list/base.html' %}
+{% load static %}
+{% block title %}
+{% if category %} {{ category.name }} {% else %} Страница товаров {% endif %}
+{% endblock %}
+
+
+{% block content %}
+<div class="products-list__wrapper container">
+  <nav class="categories">
+    <h2 class="second-title mb-40">Categories:</h2>
+    <a class="categories-item" href="{% url "shop:productlist" %}">
+      All
+    </a>
+    {% for cat in categories %}
+    <a class="categories-item" href="{{ cat.get_absolute_url }}">
+      {{ cat.name }}
+    </a>
+    {% endfor %}
+  </nav>
+
+  <div class="products-list">
+    <h1 class="main-title mb-20">{% if category %}{{ category.name }}{% else %}Products:{% endif %}</h1>
+    <div class="products-list__content">
+      {% for product in products %}
+      <div class="product-card">
+        <a class="second-title product-card__title" href="{{ product.get_absolute_url }}">
+          {{ product.title }}
+        </a>
+        <img class="product-card__img" src={{ product.image.url }}>
+        <p class="product-description">{{ product.body }}</p>
+        <p class="product-price"><span class="product-price__title">Price:</span> {{ product.price }} $.</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

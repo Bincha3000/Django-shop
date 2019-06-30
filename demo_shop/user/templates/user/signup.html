@@ -1,0 +1,27 @@
+{% extends 'products_list/base.html' %}
+{% load static %}
+{% block content %}
+<section class="signup">
+    <h1 class="main-title text-center mb-40">Регистрация</h1>
+    <form method="post" class="form">
+        {% csrf_token %}
+        <label for="username">
+            Имя пользователя:
+        </label>
+        <input class="input mb-20" id="username" type="text" name="username">
+        <label for="email">
+            Email:
+        </label>
+        <input class="input mb-20" id="email" type="email" name='email'>
+        <label for="first_password">
+            Пароль:
+        </label>
+        <input class="input mb-20" id="first_password" type="password" name="password">
+        <label for="second_password">
+            Ещё раз малышка:
+        </label>
+        <input class="input mb-40" id="second_password" type="password" name="password2">
+        <input class="main-button" type="submit" value=" Регистрация">
+    </form>
+</section>
+{% endblock %}

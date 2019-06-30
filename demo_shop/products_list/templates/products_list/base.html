@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static "style.css" %}">
+  <link href="https://fonts.googleapis.com/css?family=Emilys+Candy|Kaushan+Script&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="{% static "reset.css" %}"> -->
+  <!-- <link href="{% static 'bulma.min.css' %}" rel="stylesheet"> -->
+</head>
+
+
+<body>
+  <header class="header mb-20">
+    <div class="header-bg"></div>
+    <div class="header-content container">
+      <div class="titles">
+        <h1 class="main-title">
+          Candy shop
+        </h1>
+        <h2 class="second-title">
+          Sweeter than any kiss...
+        </h2>
+      </div>
+
+      <div class="header-block">
+        <div class="card mb-10">
+          <h2 class="second-title">
+            {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+            Shopping cart:
+            <a href="{% url "cart:CartDetail" %}">
+              {{ total_items }} тов. {{ cart.get_total_price }} руб.
+            </a>
+            {% else %}
+            <p class="empty-cart">Your cart is empty</p>
+            {% endif %}
+
+            {% endwith %}
+          </h2>
+        </div>
+        <div class="header-buttons">
+          {% if user.is_authenticated %}
+          <a class="main-button btn-txt" href="{% url "user:logout" %}">Logout</a><br>
+          {% else %}
+          <a class="main-button btn-txt mr-20" href="{% url "user:signup" %}">SignUp</a><br>
+          <a class="main-button btn-txt" href="{% url "user:login" %}">Login</a><br>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+</body>
+
+</html>
