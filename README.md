@@ -1,4 +1,4 @@
-# Django-shop
+# django-shop
 OTUS Home Work 6
 
 
@@ -19,7 +19,7 @@ OTUS Home Work 6
 ## Run project:
 
 ```
-git clone git@github.com:Bincha3000/Django-shop.git
+git clone git@github.com:gladunvv/django-shop.git
 pip install -r requirements.txt
 pyhon demo_shop/manage.py runserver
 ```
