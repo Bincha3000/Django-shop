@@ -35,6 +35,6 @@ pyhon demo_shop/manage.py runserver
 * Cart
 
 ## Frontend:
-![My Shop](https://pp.userapi.com/c858224/v858224949/4e3d/6P7MOHIdI1w.jpg)
+![My Shop](https://res.cloudinary.com/dtgupwmg6/image/upload/v1564644469/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_%D0%BE%D1%82_2019-06-30_15-29-46_nddkro.png)
 
 
